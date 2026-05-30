@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --color-primary: #3b5bdb;
+  --color-primary-hover: #2b4cc4;
+  --color-accent: #dbe4ff;
+  --color-bg-custom: #f5f6fa;
+  --color-surface: #ffffff;
+  --color-text-dark: #1c1e29;
+  --color-muted: #6b7280;
+  --color-border-custom: #e5e7eb;
+  
+  --color-success: #16a34a;
+  --color-warning: #f59e0b;
+  --color-danger: #dc2626;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Base Styles */
+body {
+  font-family: var(--font-sans);
+  background-color: #f5f6fa; /* Fallback for bg-custom */
+  color: #1c1e29; /* Fallback for text-dark */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Premium Card Styles */
+.premium-card {
+  background-color: white;
+  border-radius: 1rem; /* rounded-2xl */
+  box-shadow: 0 2px 8px rgba(28, 30, 41, 0.06);
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+}
+
+/* Micro-animations and Transitions */
+.interactive-element {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.interactive-element:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(28, 30, 41, 0.1);
+}
+
+/* Active Navigation Buttons */
+.active-nav-btn {
+  background-color: #dbe4ff !important;
+  color: #3b5bdb !important;
+  font-weight: 600;
+}
+
+/* Scrollbar Customization for Sleek Look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

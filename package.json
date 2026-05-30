@@ -1,0 +1,15 @@
+{
+  "name": "dailycoach-root",
+  "version": "1.0.0",
+  "description": "DailyCoach — AI Habit Tracker root project runner",
+  "private": true,
+  "scripts": {
+    "install-all": "npm install --prefix client && python -m venv server/venv && server/venv/Scripts/pip install -r server/requirements.txt",
+    "dev:server": "server/venv/Scripts/uvicorn --app-dir server main:app --reload --port 5000",
+    "dev:client": "npm run dev --prefix client",
+    "dev": "npx concurrently \"npm run dev:server\" \"npm run dev:client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
